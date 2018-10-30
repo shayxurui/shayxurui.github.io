@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-30T10:50:53.074Z</updated>
+  <updated>2018-10-30T11:07:54.553Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>post</title>
+    <link href="http://yoursite.com/2018/10/30/post/"/>
+    <id>http://yoursite.com/2018/10/30/post/</id>
+    <published>2018-10-30T11:05:09.000Z</published>
+    <updated>2018-10-30T11:07:54.553Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Post-content…"><a href="#Post-content…" class="headerlink" title="Post content…"></a>Post content…</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Post-content…&quot;&gt;&lt;a href=&quot;#Post-content…&quot; class=&quot;headerlink&quot; title=&quot;Post content…&quot;&gt;&lt;/a&gt;Post content…&lt;/h2&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>人脸关键点基本操作函数</title>
