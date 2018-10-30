@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-30T11:07:54.553Z</updated>
+  <updated>2018-10-30T11:24:54.814Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>maskrcnn阅读笔记</title>
+    <link href="http://yoursite.com/2018/10/30/maskrcnn%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2018/10/30/maskrcnn阅读笔记/</id>
+    <published>2018-10-30T11:20:42.000Z</published>
+    <updated>2018-10-30T11:24:54.814Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="deep learning" scheme="http://yoursite.com/tags/deep-learning/"/>
+    
+  </entry>
   
   <entry>
     <title>post</title>
