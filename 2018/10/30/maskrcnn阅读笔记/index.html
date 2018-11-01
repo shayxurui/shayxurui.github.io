@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="xurui blog">
 <meta property="og:description" content="这是我阅读Facebook发布基于pytorch1.0版本的mask r cnn所做的笔记。">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2018-11-01T01:53:21.602Z">
+<meta property="og:updated_time" content="2018-11-01T02:04:49.800Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="maskrcnn阅读笔记">
 <meta name="twitter:description" content="这是我阅读Facebook发布基于pytorch1.0版本的mask r cnn所做的笔记。">
@@ -140,7 +140,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes read (About 331 words)
+                    2 minutes read (About 348 words)
                 </span>
                 
             </div>
@@ -154,9 +154,9 @@
         <div class="content">
             <p>这是我阅读Facebook发布基于pytorch1.0版本的mask r cnn所做的笔记。<br><a id="more"></a> </p>
 <p>#优化器</p>
-<pre><code>optimizer = make_optimizer(cfg, model)                 #得到优化器
-
-def make_optimizer(cfg, model):
+<pre><code>optimizer = make_optimizer(cfg, model)                 #得到学习率为0.02,权值衰减为0.0001，冲量是0.9的SGD优化器  
+</code></pre><!-- more -->
+<pre><code>def make_optimizer(cfg, model):
     params = []
     for key, value in model.named_parameters():
         if not value.requires_grad:                      #若值不需要梯度计算，则跳过这次循环
@@ -172,8 +172,8 @@ def make_optimizer(cfg, model):
     return optimizer
 </code></pre><p>#学习率更新规则</p>
 <pre><code>scheduler = make_lr_scheduler(cfg, optimizer)
-
-def make_lr_scheduler(cfg, optimizer):
+</code></pre><!-- more --> 
+<pre><code>def make_lr_scheduler(cfg, optimizer):
     return WarmupMultiStepLR(
         optimizer,
         cfg.SOLVER.STEPS,
@@ -214,16 +214,14 @@ class WarmupMultiStepLR(torch.optim.lr_scheduler._LRScheduler):
 
     def get_lr(self):
         warmup_factor = 1
-        if self.last_epoch &lt; self.warmup_iters:
+        if self.last_epoch &lt; self.warmup_iters: 
             if self.warmup_method == &quot;constant&quot;:
                 warmup_factor = self.warmup_factor
             elif self.warmup_method == &quot;linear&quot;:
-                alpha = self.last_epoch / self.warmup_iters
-                warmup_factor = self.warmup_factor * (1 - alpha) + alpha
+                alpha = self.last_epoch / self.warmup_iters          # -0.002
+                warmup_factor = self.warmup_factor * (1 - alpha) + alpha     # 500.98
         return [
-            base_lr
-            * warmup_factor
-            * self.gamma ** bisect_right(self.milestones, self.last_epoch)
+            base_lr* warmup_factor* self.gamma ** bisect_right(self.milestones, self.last_epoch)
             for base_lr in self.base_lrs
         ]
 </code></pre>
@@ -295,7 +293,7 @@ class WarmupMultiStepLR(torch.optim.lr_scheduler._LRScheduler):
             <div class="level-item has-text-centered">
                 <div>
                     <p class="heading">
-                        Entradas
+                        Posts
                     </p>
                     <p class="title has-text-weight-normal">
                         2
@@ -305,7 +303,7 @@ class WarmupMultiStepLR(torch.optim.lr_scheduler._LRScheduler):
             <div class="level-item has-text-centered">
                 <div>
                     <p class="heading">
-                        Categorias
+                        Categories
                     </p>
                     <p class="title has-text-weight-normal">
                         0
@@ -315,7 +313,7 @@ class WarmupMultiStepLR(torch.optim.lr_scheduler._LRScheduler):
             <div class="level-item has-text-centered">
                 <div>
                     <p class="heading">
-                        Etiqueta
+                        Tag
                     </p>
                     <p class="title has-text-weight-normal">
                         1
@@ -325,7 +323,7 @@ class WarmupMultiStepLR(torch.optim.lr_scheduler._LRScheduler):
         </nav>
         <div class="level">
             <a class="level-item button is-link is-rounded" href="http://github.com/shayxurui">
-                SEGUIR</a>
+                Follow</a>
         </div>
         
         
@@ -412,7 +410,7 @@ class WarmupMultiStepLR(torch.optim.lr_scheduler._LRScheduler):
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Categorias
+                Categories
             </h3>
             <ul class="menu-list">
             
@@ -425,7 +423,7 @@ class WarmupMultiStepLR(torch.optim.lr_scheduler._LRScheduler):
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Nube de etiquetas
+            Tag Cloud
         </h3>
         <a href="/tags/deep-learning/" style="font-size: 10px;">deep learning</a>
     </div>
@@ -439,7 +437,7 @@ class WarmupMultiStepLR(torch.optim.lr_scheduler._LRScheduler):
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recientes
+            Recent
         </h3>
         
         <article class="media">
@@ -488,7 +486,7 @@ class WarmupMultiStepLR(torch.optim.lr_scheduler._LRScheduler):
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archivos
+            Archives
         </h3>
         <ul class="menu-list">
         
@@ -512,7 +510,7 @@ class WarmupMultiStepLR(torch.optim.lr_scheduler._LRScheduler):
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Etiquetas
+                Tags
             </h3>
             <ul class="menu-list">
                 
@@ -545,7 +543,7 @@ class WarmupMultiStepLR(torch.optim.lr_scheduler._LRScheduler):
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recientes
+            Recent
         </h3>
         
         <article class="media">
@@ -594,7 +592,7 @@ class WarmupMultiStepLR(torch.optim.lr_scheduler._LRScheduler):
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archivos
+            Archives
         </h3>
         <ul class="menu-list">
         
@@ -618,7 +616,7 @@ class WarmupMultiStepLR(torch.optim.lr_scheduler._LRScheduler):
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Etiquetas
+                Tags
             </h3>
             <ul class="menu-list">
                 
@@ -906,10 +904,10 @@ class WarmupMultiStepLR(torch.optim.lr_scheduler._LRScheduler):
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Entradas',
+                POSTS: 'Posts',
                 PAGES: 'Pages',
-                CATEGORIES: 'Categorias',
-                TAGS: 'Etiquetas',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
                 UNTITLED: '(Untitled)',
             },
             CONTENT_URL: '/content.json',
