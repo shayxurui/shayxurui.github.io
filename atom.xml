@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-08T01:11:21.988Z</updated>
+  <updated>2018-11-08T01:46:33.130Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,14 +21,18 @@
     <link href="http://yoursite.com/2018/11/08/LAB/"/>
     <id>http://yoursite.com/2018/11/08/LAB/</id>
     <published>2018-11-08T01:09:44.000Z</published>
-    <updated>2018-11-08T01:11:21.988Z</updated>
+    <updated>2018-11-08T01:46:33.130Z</updated>
+    
+    <content type="html"><![CDATA[<p>Look at Boundary: A Boundary-Aware Face Alignment Algorithm<br><a id="more"></a><br>创新点:与直接回归热点图不同，作者引入边界热点图来辅助回归关键点坐标点，然后通过对抗学习来判断生成的边界热点图的好坏。</p><p>边界热点图的优点：不同的数据集有不同的关键点数量，边界热点图使用插值法生成边界，使得不同数据集都有相同的边界。</p><p><img src="/images/articalImage/LAB/LAB.jpg" alt="网络结构"></p>]]></content>
     
     <summary type="html">
+    
+      &lt;p&gt;Look at Boundary: A Boundary-Aware Face Alignment Algorithm&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
     
-      <category term="deep learning,face alignmnet" scheme="http://yoursite.com/tags/deep-learning-face-alignmnet/"/>
+      <category term="face alignmnet" scheme="http://yoursite.com/tags/face-alignmnet/"/>
     
   </entry>
   
