@@ -18,7 +18,7 @@
 <meta property="og:image" content="http://yoursite.com/images/articalImage/LAB/LAB.jpg">
 <meta property="og:image" content="http://yoursite.com/images/articalImage/LAB/FMF.jpg">
 <meta property="og:image" content="http://yoursite.com/images/articalImage/LAB/messagepassing.jpg">
-<meta property="og:updated_time" content="2018-11-08T02:35:17.801Z">
+<meta property="og:updated_time" content="2018-11-08T02:46:38.222Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LAB">
 <meta name="twitter:description" content="Look at Boundary: A Boundary-Aware Face Alignment Algorithm">
@@ -138,7 +138,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes read (About 331 words)
+                    3 minutes read (About 385 words)
                 </span>
                 
             </div>
@@ -165,6 +165,7 @@
 <p>$H=F+(F*T(M+F))$其中H是经过fusion的feature maps，F是输入的feature maps，T是hourglass网络模块，M是经过downsampling的boundary heatmaps。</p>
 <p><img src="/images/articalImage/LAB/messagepassing.jpg" alt="message passing"></p>
 <p>作者在不同的stack间生成的feature map又进行纵向的message passing，来refine boundary heatmaps，考虑到算力，所以传递的信息是bi-direction tree，每个节点代表一个boundary。</p>
+<p>Landmark-Based Boundary Effectiveness Discriminator的输入是模块Boundary Heatmap Estimator的输出Estimated Boundary Heatmaps和label Ground Truth Boundary Heatmaps，输出是判断Estimated Boundary Heatmaps是否是好的预测，是否对Boundary-Aware Landmark Regressor有帮助。</p>
 
         </div>
         
