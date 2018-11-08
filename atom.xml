@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-08T02:24:39.867Z</updated>
+  <updated>2018-11-08T02:35:17.801Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2018/11/08/LAB/"/>
     <id>http://yoursite.com/2018/11/08/LAB/</id>
     <published>2018-11-08T01:09:44.000Z</published>
-    <updated>2018-11-08T02:24:39.867Z</updated>
+    <updated>2018-11-08T02:35:17.801Z</updated>
     
-    <content type="html"><![CDATA[<p>Look at Boundary: A Boundary-Aware Face Alignment Algorithm<br><a id="more"></a> </p><p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><br>创新点:与直接回归热点图不同，作者引入边界热点图来辅助回归关键点坐标点，然后通过对抗学习来判断生成的边界热点图的好坏。</p><p>边界热点图的优点：不同的数据集有不同的关键点数量，边界热点图使用插值法生成边界，使得不同数据集都有相同的边界。</p><p>边界热点图：</p><p><img src="/images/articalImage/LAB/LAB.jpg" alt="网络结构"></p><p>网络主要分成三个部分：</p><ol><li>Boundary Heatmap Estimator</li><li>Boundary-Aware Landmark Regressor</li><li>Landmark-Based Boundary Effectiveness Discriminator</li></ol><p>图片经过Boundary Heatmap Estimator模块得到boundary heatmaps。boundary heatmaps再和input image进行fushion操<br>作产生Boundary-Aware Landmark Regressor的输入。<br>$H=I+(M*I)$<br>每经过两个residual uint都和boundary heatmaps进行feature map fusion操作。<br><img src="/images/articalImage/LAB/FMF.jpg" alt="feature map fusion"></p><p>$H=F+(F*T(M+F))$其中H是经过fusion的feature maps，F是输入的feature maps，T是hourglass网络模块，M是经过downsampling的boundary heatmaps。</p>]]></content>
+    <content type="html"><![CDATA[<p>Look at Boundary: A Boundary-Aware Face Alignment Algorithm<br><a id="more"></a> </p><p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><br>创新点:与直接回归热点图不同，作者引入边界热点图来辅助回归关键点坐标点，然后通过对抗学习来判断生成的边界热点图的好坏。</p><p>边界热点图的优点：不同的数据集有不同的关键点数量，边界热点图使用插值法生成边界，使得不同数据集都有相同的边界。</p><p>边界热点图：</p><p><img src="/images/articalImage/LAB/LAB.jpg" alt="网络结构"></p><p>网络主要分成三个部分：</p><ol><li>Boundary Heatmap Estimator</li><li>Boundary-Aware Landmark Regressor</li><li>Landmark-Based Boundary Effectiveness Discriminator</li></ol><p>图片经过Boundary Heatmap Estimator模块得到boundary heatmaps。boundary heatmaps再和input image进行fushion操<br>作产生Boundary-Aware Landmark Regressor的输入。<br>$H=I+(M*I)$<br>每经过两个residual uint都和boundary heatmaps进行feature map fusion操作。<br><img src="/images/articalImage/LAB/FMF.jpg" alt="feature map fusion"></p><p>$H=F+(F*T(M+F))$其中H是经过fusion的feature maps，F是输入的feature maps，T是hourglass网络模块，M是经过downsampling的boundary heatmaps。</p><p><img src="/images/articalImage/LAB/messagepassing.jpg" alt="message passing"></p><p>作者在不同的stack间生成的feature map又进行纵向的message passing，来refine boundary heatmaps，考虑到算力，所以传递的信息是bi-direction tree，每个节点代表一个boundary。</p>]]></content>
     
     <summary type="html">
     
