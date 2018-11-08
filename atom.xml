@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-05T08:08:00.097Z</updated>
+  <updated>2018-11-08T01:11:21.988Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LAB</title>
+    <link href="http://yoursite.com/2018/11/08/LAB/"/>
+    <id>http://yoursite.com/2018/11/08/LAB/</id>
+    <published>2018-11-08T01:09:44.000Z</published>
+    <updated>2018-11-08T01:11:21.988Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="deep learning,face alignmnet" scheme="http://yoursite.com/tags/deep-learning-face-alignmnet/"/>
+    
+  </entry>
   
   <entry>
     <title>人体关键点综述</title>
