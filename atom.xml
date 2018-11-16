@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-08T02:46:38.222Z</updated>
+  <updated>2018-11-16T01:00:51.914Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PyraNet</title>
+    <link href="http://yoursite.com/2018/11/16/PyraNet/"/>
+    <id>http://yoursite.com/2018/11/16/PyraNet/</id>
+    <published>2018-11-16T00:43:51.000Z</published>
+    <updated>2018-11-16T01:00:51.914Z</updated>
+    
+    <content type="html"><![CDATA[<p>作者在hourglass网络的基础上进行改进，PyraNet网络结构如下所示：<img src="/images/articalImage/PyraNet/PyraNet.png" alt="Pyramid Net"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;作者在hourglass网络的基础上进行改进，PyraNet网络结构如下所示：&lt;img src=&quot;/images/articalImage/PyraNet/PyraNet.png&quot; alt=&quot;Pyramid Net&quot;&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="deep learning" scheme="http://yoursite.com/categories/deep-learning/"/>
+    
+    
+      <category term="human pose estimation" scheme="http://yoursite.com/tags/human-pose-estimation/"/>
+    
+  </entry>
   
   <entry>
     <title>LAB</title>
