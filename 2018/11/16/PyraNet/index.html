@@ -17,7 +17,8 @@
 <meta property="og:locale" content="Chinese">
 <meta property="og:image" content="http://yoursite.com/images/articalImage/PyraNet/PyraNet.png">
 <meta property="og:image" content="http://yoursite.com/images/articalImage/PyraNet/PRM.png">
-<meta property="og:updated_time" content="2018-11-16T01:09:53.096Z">
+<meta property="og:image" content="http://yoursite.com/images/articalImage/PyraNet/ResidualUnit.png">
+<meta property="og:updated_time" content="2018-11-16T01:15:32.846Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PyraNet">
 <meta name="twitter:description" content="Learning Feature Pyramids for Human Pose Estimation">
@@ -141,7 +142,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes read (About 302 words)
+                    3 minutes read (About 397 words)
                 </span>
                 
             </div>
@@ -160,6 +161,8 @@
 <p>PRM-B 则是将 PRM-A 中不同分辨率的分支开始的 1*1 卷积进行参数共享，从而减少参数数量。</p>
 <p>PRM-C 则是将 PRM-B 中多分辨率特征的相加改为了串联，由于串联后的特征通道数与原来不同，因此可能需要再进行一个 1*1 的卷积对齐特征通道后再与原特征相加。</p>
 <p>PRM-D 则是使用空洞卷积代，替下采样和上采样得到多尺度的特征</p>
+<p>Output Variance Accumulation<br><img src="/images/articalImage/PyraNet/ResidualUnit.png" alt="ResidualUnit"></p>
+<p>作者还提到原始的残差模块有输出方差积累的问题，当堆叠多个残差块时，将原始特征直接与卷积后的特征相加时会有较大的方差，通过对原始特征添加一个 Bn-ReLu-Conv 操作可以较好的控制这个问题。</p>
 
         </div>
         

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-16T01:09:53.096Z</updated>
+  <updated>2018-11-16T01:15:32.846Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2018/11/16/PyraNet/"/>
     <id>http://yoursite.com/2018/11/16/PyraNet/</id>
     <published>2018-11-16T00:43:51.000Z</published>
-    <updated>2018-11-16T01:09:53.096Z</updated>
+    <updated>2018-11-16T01:15:32.846Z</updated>
     
-    <content type="html"><![CDATA[<p>Learning Feature Pyramids for Human Pose Estimation<br><a id="more"></a> </p><p>作者在hourglass网络的基础上进行改进，PyraNet网络结构如下所示：<img src="/images/articalImage/PyraNet/PyraNet.png" alt="Pyramid Net"></p><p>作者提出四种新的金字塔模块（PRMs）来替换hourglass中的residual模块。<img src="/images/articalImage/PyraNet/PRM.png" alt="PRMs"></p><p>PRM-A 是在原先的残差模块的分支基础上，直接增加多个分辨率的分支，其分辨率的不同主要是通过下采样实现的，而由于残差模块的结果需要将不同分支的结果相加，因此下采样后的特征要通过上采样恢复原来分辨率。</p><p>PRM-B 则是将 PRM-A 中不同分辨率的分支开始的 1*1 卷积进行参数共享，从而减少参数数量。</p><p>PRM-C 则是将 PRM-B 中多分辨率特征的相加改为了串联，由于串联后的特征通道数与原来不同，因此可能需要再进行一个 1*1 的卷积对齐特征通道后再与原特征相加。</p><p>PRM-D 则是使用空洞卷积代，替下采样和上采样得到多尺度的特征</p>]]></content>
+    <content type="html"><![CDATA[<p>Learning Feature Pyramids for Human Pose Estimation<br><a id="more"></a> </p><p>作者在hourglass网络的基础上进行改进，PyraNet网络结构如下所示：<img src="/images/articalImage/PyraNet/PyraNet.png" alt="Pyramid Net"></p><p>作者提出四种新的金字塔模块（PRMs）来替换hourglass中的residual模块。<img src="/images/articalImage/PyraNet/PRM.png" alt="PRMs"></p><p>PRM-A 是在原先的残差模块的分支基础上，直接增加多个分辨率的分支，其分辨率的不同主要是通过下采样实现的，而由于残差模块的结果需要将不同分支的结果相加，因此下采样后的特征要通过上采样恢复原来分辨率。</p><p>PRM-B 则是将 PRM-A 中不同分辨率的分支开始的 1*1 卷积进行参数共享，从而减少参数数量。</p><p>PRM-C 则是将 PRM-B 中多分辨率特征的相加改为了串联，由于串联后的特征通道数与原来不同，因此可能需要再进行一个 1*1 的卷积对齐特征通道后再与原特征相加。</p><p>PRM-D 则是使用空洞卷积代，替下采样和上采样得到多尺度的特征</p><p>Output Variance Accumulation<br><img src="/images/articalImage/PyraNet/ResidualUnit.png" alt="ResidualUnit"></p><p>作者还提到原始的残差模块有输出方差积累的问题，当堆叠多个残差块时，将原始特征直接与卷积后的特征相加时会有较大的方差，通过对原始特征添加一个 Bn-ReLu-Conv 操作可以较好的控制这个问题。</p>]]></content>
     
     <summary type="html">
     
