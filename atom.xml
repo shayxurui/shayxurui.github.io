@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-16T01:04:23.299Z</updated>
+  <updated>2018-11-16T01:06:20.599Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2018/11/16/PyraNet/"/>
     <id>http://yoursite.com/2018/11/16/PyraNet/</id>
     <published>2018-11-16T00:43:51.000Z</published>
-    <updated>2018-11-16T01:04:23.299Z</updated>
+    <updated>2018-11-16T01:06:20.599Z</updated>
     
-    <content type="html"><![CDATA[<p>Learning Feature Pyramids for Human Pose Estimation<br><a id="more"></a> </p><p>作者在hourglass网络的基础上进行改进，PyraNet网络结构如下所示：<img src="/images/articalImage/PyraNet/PyraNet.png" alt="Pyramid Net"></p>]]></content>
+    <content type="html"><![CDATA[<p>Learning Feature Pyramids for Human Pose Estimation<br><a id="more"></a> </p><p>作者在hourglass网络的基础上进行改进，PyraNet网络结构如下所示：<img src="/images/articalImage/PyraNet/PyraNet.png" alt="Pyramid Net"></p><p>作者提出四种新的金字塔模块（PRMs）来替换hourglass中的residual模块。<img src="/images/articalImage/PyraNet/PRMs.png" alt="PRMs"></p>]]></content>
     
     <summary type="html">
     
